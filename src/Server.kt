@@ -30,6 +30,8 @@ fun main(args: Array<String>) {
                         .use { printWriter ->
                             BufferedReader(InputStreamReader(localSocket.getInputStream()))
                                 .use { bufferedReader ->
+
+
                                     // Читаем сообщения от клиента
                                     while (true) {
                                         val line = bufferedReader.readLine()
@@ -49,10 +51,12 @@ fun main(args: Array<String>) {
                                             break
                                         }
                                     }
+
+
+
                                 }
                         }
                 }
-
         }
     } catch (ex: IOException) {
         //Вывод трассировки ошибки в поток вывода консоли System.out.
